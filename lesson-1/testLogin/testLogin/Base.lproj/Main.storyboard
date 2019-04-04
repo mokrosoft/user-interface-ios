@@ -71,6 +71,9 @@
                                             <constraint firstAttribute="height" constant="55" id="vbi-Fj-Ldh"/>
                                         </constraints>
                                         <state key="normal" title="Залогиниться"/>
+                                        <connections>
+                                            <action selector="clickLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ag2-yC-PCt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -110,6 +113,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="loginInput" destination="UzH-DC-T89" id="5eg-3o-P7w"/>
+                        <outlet property="passwordInput" destination="zYn-PJ-B5N" id="5VY-j7-KZa"/>
+                        <outlet property="scrollView" destination="Rdk-cD-6w4" id="OFm-qn-bgZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
