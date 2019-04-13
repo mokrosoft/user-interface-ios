@@ -16,20 +16,26 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
-    @IBAction func clickLoginButton(_ sender: UIButton) {
-        print("click on button")
-        // Получаем текст логина
+    
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         let login = loginInput.text!
-        // Получаем текст-пароль
         let password = passwordInput.text!
         
-        // Проверяем, верны ли они
-        if login == "admin" && password == "123456" {
-            print("успешная авторизация")
+        if login == "" && password == "" {
+            return true
         } else {
-            print("неуспешная авторизация")
+            let alert = UIAlertController(title: "Ошибка", message: "Пароль введен неверно", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            print("login failed")
+            return false
         }
+        
     }
+
+    
+    
     
     
     override func viewDidLoad() {
@@ -97,4 +103,6 @@ class ViewController: UIViewController {
 
     
 }
+
+var aa: String = "12"
 
